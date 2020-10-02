@@ -1,0 +1,136 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a = 12\n",
+      "a = 12\n",
+      "a = 12\n",
+      "area : 62.353829072479584\n"
+     ]
+    }
+   ],
+   "source": [
+    "class triangle:\n",
+    "    def __init__(self, a, b, c):\n",
+    "        self.a = float(input(\"a = \"))\n",
+    "        self.b = float(input(\"a = \"))\n",
+    "        self.c = float(input(\"a = \"))\n",
+    "        \n",
+    "\n",
+    "class perimeter(triangle):\n",
+    "    def __init__(self, a, b, c):\n",
+    "        super().__init__(a, b, c)\n",
+    "\n",
+    "    def area_triangle(self):\n",
+    "        s = (self.a + self.b + self.c) / 2\n",
+    "        return  float((s * (s - self.a) * (s - self.b) * (s - self.c))) ** 0.5\n",
+    "\n",
+    "p = perimeter(a, b, c) \n",
+    "print(\"area : {}\".format(p.area_triangle()))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter words: aa bbb ccccc dddddd eeeeeee fffffff \n",
+      "Minimum length of words: 4\n",
+      "Words longer than 4 are ccccc, dddddd, eeeeeee, fffffff.\n"
+     ]
+    }
+   ],
+   "source": [
+    "def longwords(wordlist, length):\n",
+    "    return (word for word in wordlist if len(word) >= length)\n",
+    "\n",
+    "def main():\n",
+    "    words = input(\"Enter words: \").split()\n",
+    "    length = int(input(\"Minimum length of words: \"))\n",
+    "    print(\"Words longer than {} are {}.\".format(length,\n",
+    "          ', '.join(longwords(words, length))))\n",
+    "main()    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "List of words:['ab', 'cde', 'erty']\n",
+      "List of wordlength:[2, 3, 4]\n"
+     ]
+    }
+   ],
+   "source": [
+    "words_list = ['ab','cde','erty']\n",
+    " \n",
+    "ints_list = []\n",
+    " \n",
+    "for i in range(len(words_list)):\n",
+    "    ints_list.append(len(words_list[i]))\n",
+    " \n",
+    "print (\"List of words:\"+str(words_list))    \n",
+    "print (\"List of wordlength:\"+str(ints_list))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def vowel(char):\n",
+    "    if char.lower() in 'aeiou':\n",
+    "        return True\n",
+    "    if char.upper() in 'AEIOU':\n",
+    "        return TRUE\n",
+    "    else:\n",
+    "        return False"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
